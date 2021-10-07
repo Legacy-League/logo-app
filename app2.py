@@ -50,10 +50,10 @@ class FeatureLoss(nn.Module):
     
     def __del__(self): self.hooks.remove()
 
-MODEL_URL = "https://www.dropbox.com/s/8zmvqbicbjtbycj/J4photos.pkl?dl=1"
-urllib.request.urlretrieve(MODEL_URL, "J4photos.pkl")
+MODEL_URL = "https://www.dropbox.com/s/daf70v42oo93kym/Legacy_best.pkl?dl=1"
+urllib.request.urlretrieve(MODEL_URL, "Legacy_best.pkl")
 path = Path(".")
-learn=load_learner(path, 'J4photos.pkl')
+learn=load_learner(path, 'Legacy_best.pkl')
 
 urlretrieve("https://s.hdnux.com/photos/01/07/33/71/18726490/5/1200x0.jpg","soccer1.jpg")
 urlretrieve("https://cdn.vox-cdn.com/thumbor/4J8EqJBsS2qEQltIBuFOJWSn8dc=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22466347/1312893179.jpg","soccer2.jpg")
